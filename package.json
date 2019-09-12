@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "start": "node app.js"
+      },
+      "devDependencies": {},
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vaishnavasokan/Libms.git"
+      }
+}
