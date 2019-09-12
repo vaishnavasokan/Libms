@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Storystrap Template</title>
+		<title>Library App</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,11 +27,7 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <% for(var i=0;i<nav.length;i++){%>
-        <li>
-          <a href="<%= nav[i].link%>"><%= nav[i].title%></a>
-        </li>
-        <%}%>
+         
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -95,20 +91,20 @@
               <form action="/users/addnew" method="post">
                   <table>
                     <tr>
-                        <td>First Name : </td>
+                        <td style="font-family: Verdana">First Name </td>
                         <td><input type="text" class="form-control" name="fname" style="margin: 10px;" required/></td>
                     </tr>
                     <tr>
-                        <td>Username : </td>
+                        <td style="font-family: Verdana">Username </td>
                         <td><input type="text" class="form-control" name="uname" style="margin: 10px;" required/></td>
                     </tr>
                     <tr>
-                        <td>Password : </td>
+                        <td style="font-family: Verdana">Password </td>
                         <td><input type="password" class="form-control" name="pwd" style="margin: 10px;" required/></td>
                     </tr>
                     <tr>
-                        <td>Role :</td>
-                        <td><select name="role" id="" class="form-control" style="margin: 10px;">
+                        <td style="font-family: Verdana">Role </td>
+                        <td><select name="role" id="" class="form-control" style="margin: 10px;" required>
                               <option value="---select---">---select---</option>
                               <option value="Admin">Admin</option>
                               <option value="User">User</option>

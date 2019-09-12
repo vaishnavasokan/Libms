@@ -28,7 +28,7 @@ var author_arr = [
 
 router.get("/",function(req,res)
 {
-    res.render("authors",{pagetitle:"Library",nav:[{link:"/book", title:"BOOKS"},{link:"/authors", title:"AUTHORS"},{link:"/addbook", title:"NEW BOOK"}],
+    res.render("authors",{pagetitle:"Library",nav:[{link:"/book", title:"BOOKS"},{link:"/authors", title:"AUTHORS"},{link:"/book/addbook", title:"ADD BOOK"},{link:"/book/editbook", title:"EDIT/DELETE BOOK"}],
     authordetails: author_arr });
 })
 

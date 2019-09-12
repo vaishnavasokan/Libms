@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Storystrap Template</title>
+		<title>Library App</title>
 		<meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <base href="/">
@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand">Home</a>
+      
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -35,12 +35,7 @@
         <%}%>
       </ul>
       <ul class="nav navbar-right navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-search"></i></a>
-          <ul class="dropdown-menu" style="padding:12px;">
-            <form class="form-inline">
-              <button type="submit" class="btn btn-default pull-right"><i class="glyphicon glyphicon-search"></i></button><input type="text" class="form-control pull-left" placeholder="Search">
-            </form>
+        <a href="/" class="navbar-brand">LOGOUT</a>
           </ul>
         </li>
       </ul>
@@ -95,7 +90,7 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="<%= bookdetails[0].image%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="#"><img alt="" src="/book/view/<%= bookdetails[0].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%= bookdetails[0].title%></h3>
@@ -103,7 +98,8 @@
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%= bookdetails[0].author%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%= bookdetails[0].category%></small>
-                  </h4></div>
+                  </h4>
+                  <h3>Price : <%= bookdetails[0].price%></h3></div>
                 <div class="col-xs-3"></div>
               </div>
               <br><br>

@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Storystrap Template</title>
+		<title>Library App</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,11 +27,7 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-          <% for(var i=0;i<nav.length;i++){%>
-        <li>
-          <a href="<%= nav[i].link%>"><%= nav[i].title%></a>
-        </li>
-        <%}%>
+
       </ul>
       <ul class="nav navbar-right navbar-nav">
         <li class="dropdown">
@@ -96,22 +92,22 @@
               <form action="/users/login" method="post">
                 <table>
                         <tr>
-                            <td>Username : </td>
+                            <td style="font-family: Verdana">Username </td>
                             <td><input type="text"  name="uname" class="form-control" style="margin: 10px" required/></td>
                         </tr>
                         
                         <tr>
-                            <td >Password : </td>
+                            <td style="font-family: Verdana">Password </td>
                             <td><input type="password"  name="pwd" class="form-control" style="margin: 10px" required/></td>
                         </tr>
 
                         <tr>
                             <td></td>
-                            <td><input type="submit" class="btn btn-success" class="form-control" style="margin: 10px"name="login"/></td>
+                            <td><input type="submit" class="btn btn-success" class="form-control" style="margin: 10px"/></td>
                         </tr>
                         <tr>
                           <td></td>
-                          <td><a href="/signup">Click here to Signup</a></td>
+                          <td><a href="/signup" style="font-family: Verdana">New user? Click here to Signup</a></td>
                         </tr>
 
                 </table>

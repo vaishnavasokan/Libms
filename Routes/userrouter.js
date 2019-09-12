@@ -3,7 +3,9 @@ const router =express.Router();
 var bodyparser = require("body-parser");
 
 var mongoose = require("mongoose");
-var url="mongodb://localhost/library"
+//var url="mongodb://localhost/library"
+
+var url="mongodb+srv://vaishnavasokan:Vysh1234*@cluster0-j3qq4.mongodb.net/library?retryWrites=true&w=majority"
 
 var user=require("../model/user");
 router.use(bodyparser.urlencoded({extended:true}))
@@ -15,6 +17,12 @@ mongoose.connect(url,function(err,result)
     else
     console.log("DB Connected!");
 })
+
+// mongoose.connect(url,{ useNewUrlParser: true }).then(() => {
+//     console.log("Connected to Database");
+//     }).catch((err) => {
+//         console.log("Not Connected to Database ERROR! ", err);
+//     });
 
 router.post("/login",function(req,res)
 {

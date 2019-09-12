@@ -5,8 +5,8 @@
 		<meta charset="utf-8">
 		<title>Library App</title>
 		<meta name="generator" content="Bootply" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <base href="/">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
@@ -83,45 +83,41 @@
       <div class="panel">
         <div class="panel-body">
           
-        
+          
+          
           <!--/stories-->
+          <% for(var i=0;i<bookdetails.length;i++){%>
           <div class="row">    
             <br>
-            <div class="col col-sm-4">
-              <form action="/book/newbook" method="post" enctype="multipart/form-data">
-                  <table>
-                    <tr>
-                        <td>Title</td>
-                        <td><input type="text" class="form-control" name="title" style="margin: 10px;" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Author</td>
-                        <td><input type="text" class="form-control" name="author" style="margin: 10px;" required/></td>
-                    </tr>
-                    <tr>
-                        <td>Genre</td>
-                        <td><input type="text" class="form-control" name="category" style="margin: 10px;" required/></td>
-                    </tr>
-                    <tr>
-                      <td>Price</td>
-                      <td><input type="text" class="form-control" name="price" style="margin: 10px;" required/></td>
-                  </tr>
-                    <tr>
-                        <td>Book cover</td>
-                        <td> <input type="file" class="form-control" name="bimage" style="margin: 10px" required > </td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            <input type="submit" class="btn btn-primary" name="Add Book" style="margin: 10px;"/>
-                        </td>
-                    </tr>
-                  </table>
-              </form>
+            <div class="col-md-2 col-sm-3 text-center">
+              <a class="story-title" href="#"><img alt="" src="/book/view/<%= bookdetails[i].image%>" style="width:100px;height:100px" class="img-circle"></a>
+            </div>
+            <div class="col-md-10 col-sm-9">
+              <h3><%= bookdetails[i].title%></h3>
+              <div class="row">
+                <div class="col-xs-9">
+                  <h4><span class="label label-default"><%= bookdetails[i].author%></span></h4><h4>
+                  <small style="font-family:courier,'new courier';" class="text-muted"><%= bookdetails[i].category%> <a href="/book/<%= bookdetails[i].title%>" class="text-muted"></a></small>
+                    <br>
+                  <ul>
+                      <li><a href="/book/update/<%= bookdetails[i].title%>" class="text-muted">Edit Book</a></li>
+                      <li><a href="/book/delete/<%= bookdetails[i].title%>" class="text-muted">Delete Book</a></li>
+                  </ul>
+                  </h4></div>
+                <div class="col-xs-3"></div>
+              </div>
+              <br><br>
+            </div>
+          </div>
+          <%}%>
+          <hr>
+    
+        
+          <hr>
           <!--/stories-->
           
           
-          
+          <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
         
           
         </div>
